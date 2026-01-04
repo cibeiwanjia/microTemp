@@ -1,0 +1,57 @@
+mode: debug
+
+bff:
+  ip: 0.0.0.0
+  port: 8080
+
+mysql:
+  ip: localhost
+  port: 3306
+  user: root
+  password: 123456
+  database: app
+
+#redis:
+#  addr: localhost:6379
+#  password:
+
+log:
+  level: debug
+  path: app.log
+  format: json
+  maxSize: 1
+  # consoleEnable Whether to enable outputting logs to the console as the sametime
+  consoleEnable: true
+
+#auth:
+#  acl:
+#    appId: ""
+#    secretKey: ""
+#    url: ""
+#    resourceName:
+#      - key: xxx
+#        value: yyy
+secretKey: ""
+
+consul:
+  host: 10.123.4.35
+  port: 8500
+  services:
+    - name: order
+      host: 10.123.4.35
+      port: 50052
+
+#是否开启链路追踪
+chain:
+  enable: true
+  host: 10.123.4.35
+  port: 4317
+  name: bff-order
+
+servers:
+  - name: order
+    host: 10.123.4.35
+    port: 50051
+  - name: user
+    host: 10.123.4.35
+    port: 50052
