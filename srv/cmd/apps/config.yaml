@@ -1,0 +1,75 @@
+mode: debug
+
+srv:
+  name: order
+  host: 10.123.4.35
+  port: 50052
+
+mysql:
+  ip: localhost
+  port: 3306
+  user: root
+  password: 123456
+  database: app
+
+redis:
+  addr: 139.159.144.170:6379
+  password: shdxshdx
+
+log:
+  level: debug
+  path: app.log
+  format: json
+  maxSize: 1
+  # consoleEnable Whether to enable outputting logs to the console as the sametime
+  consoleEnable: true
+
+#auth:
+#  acl:
+#    appId: ""
+#    secretKey: ""
+#    url: ""
+#    resourceName:
+#      - key: xxx
+#        value: yyy
+secretKey: ""
+
+consul:
+  host: 10.123.4.35
+  port: 8500
+  services:
+    - name: order
+      host: 10.123.4.35
+      port: 50052
+#    - name: user
+#      host: 192.168.31.27
+#      port: 50052
+
+nacos:
+  namespaceId: 534b8af0-b417-42fa-a896-ed16dadfef52
+  host: 139.159.144.170
+  port: 8848
+  dataId: good
+  group: dev
+
+#grpc:
+#  - name: order
+#grpc:
+#  - name: order
+#    host: IP_ADDRESS#    host: 192.168.31.27
+#grpc:
+#  - name: user
+#    host: 192.168.31.27
+#    port: 50052
+
+#是否开启链路追踪
+chain:
+  enable: true
+  host: 10.123.4.35
+  port: 4317
+  name: srv-order
+
+grpc:
+  ip: 10.123.4.35
+  port: 50052
+

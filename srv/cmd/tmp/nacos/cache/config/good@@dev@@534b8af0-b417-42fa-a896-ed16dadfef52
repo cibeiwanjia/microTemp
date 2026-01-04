@@ -1,0 +1,56 @@
+{
+  "mode": "debug",
+  "srv": {
+    "name": "srv",
+    "host": "0.0.0.0",
+    "port": 8099
+  },
+  "bff": {
+    "name": "",
+    "host": "0.0.0.0",
+    "port": 8080
+  },
+  "log": {
+    "level": "debug",
+    "path": "app.log",
+    "maxSize": 1,
+    "maxBackups": 5,
+    "maxAge": 15,
+    "compress": true,
+    "format": "json",
+    "consoleEnable": true
+  },
+  "mysql": {
+    "ip": "139.159.144.170",
+    "port": "3306",
+    "user": "root",
+    "password": "shdxshdx",
+    "db": "shdx"
+  },
+  "consul": {
+    "host": "10.123.4.35",
+    "port": 8500,
+    "services": [
+      {
+        "name": "order",
+        "host": "10.123.4.35",
+        "port": 50052,
+        "tags": []
+      }
+    ]
+  },
+  "secretKey": "",
+  "chain": {
+    "enable": true,
+    "host": "10.123.4.35",
+    "port": 4317,
+    "name": "bff-order"
+  },
+  "nacos": {
+    "host": "",
+    "port": 0,
+    "namespaceId": "",
+    "dataId": "",
+    "group": ""
+  }
+}

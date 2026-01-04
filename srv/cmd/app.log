@@ -1,0 +1,12 @@
+{"level":"INFO","time":"2024-11-18T20:43:56.709+0800","caller":"apps/server.go:94","msg":"exiting"}
+{"level":"INFO","time":"2024-11-18T22:21:34.522+0800","caller":"apps/server.go:96","msg":"exiting"}
+{"level":"INFO","time":"2024-11-18T23:34:50.193+0800","caller":"apps/server.go:126","msg":"exiting"}
+{"level":"INFO","time":"2024-11-18T23:35:17.567+0800","caller":"apps/server.go:126","msg":"exiting"}
+{"level":"ERROR","time":"2024-11-22T19:02:18.391+0800","caller":"apps/server.go:92","msg":"redis init failed: dial tcp 127.0.0.1:6379: connect: connection refused"}
+{"level":"ERROR","time":"2024-11-27T15:11:03.680+0800","caller":"apps/server.go:92","msg":"redis init failed: dial tcp 127.0.0.1:6380: connect: connection refused"}
+{"level":"ERROR","time":"2024-12-06T17:07:25.984+0800","caller":"apps/server.go:93","msg":"redis init failed: dial tcp 127.0.0.1:6380: connect: connection refused"}
+{"level":"ERROR","time":"2024-12-07T16:03:53.693+0800","caller":"apps/server.go:87","msg":"redis init failed: dial tcp 127.0.0.1:6379: connect: connection refused"}
+{"level":"ERROR","time":"2024-12-26T15:22:55.644+0800","caller":"apps/server.go:88","msg":"redis init failed: dial tcp 127.0.0.1:6380: connect: connection refused"}
+{"level":"ERROR","time":"2025-07-21T21:47:29.075+0800","caller":"apps/server.go:88","msg":"redis init failed: NOAUTH Authentication required."}
+{"level":"ERROR","time":"2025-07-21T21:48:17.512+0800","caller":"apps/server.go:88","msg":"redis init failed: NOAUTH Authentication required."}
+{"level":"ERROR","time":"2025-07-21T21:56:39.578+0800","caller":"apps/server.go:88","msg":"redis init failed: NOAUTH Authentication required."}

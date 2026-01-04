@@ -1,0 +1,151 @@
+syntax = "proto3";
+
+option go_package ="./goods";
+
+package goods;
+
+// ------------------------------------ 
+// Messages
+// ------------------------------------ 
+
+//--------------------------------goods--------------------------------
+message Goods {
+  int64 deletedAt = 1; //deletedAt
+  int64 id = 2; //id
+  int64 addTime = 3; //addTime
+  int64 isDeleted = 4; //isDeleted
+  int64 updateTime = 5; //updateTime
+  int64 categoryId = 6; //categoryId
+  int64 brandsId = 7; //brandsId
+  int64 onSale = 8; //onSale
+  string goodsSn = 9; //goodsSn
+  string name = 10; //name
+  int64 clickNum = 11; //clickNum
+  int64 soldNum = 12; //soldNum
+  int64 favNum = 13; //favNum
+  double marketPrice = 14; //marketPrice
+  double shopPrice = 15; //shopPrice
+  string goodsBrief = 16; //goodsBrief
+  int64 shipFree = 17; //shipFree
+  string images = 18; //images
+  string descImages = 19; //descImages
+  string goodsFrontImage = 20; //goodsFrontImage
+  int64 isNew = 21; //isNew
+  int64 isHot = 22; //isHot
+}
+
+message AddGoodsReq {
+  int64 deletedAt = 1; //deletedAt
+  int64 addTime = 2; //addTime
+  int64 isDeleted = 3; //isDeleted
+  int64 categoryId = 4; //categoryId
+  int64 brandsId = 5; //brandsId
+  int64 onSale = 6; //onSale
+  string goodsSn = 7; //goodsSn
+  string name = 8; //name
+  int64 clickNum = 9; //clickNum
+  int64 soldNum = 10; //soldNum
+  int64 favNum = 11; //favNum
+  double marketPrice = 12; //marketPrice
+  double shopPrice = 13; //shopPrice
+  string goodsBrief = 14; //goodsBrief
+  int64 shipFree = 15; //shipFree
+  string images = 16; //images
+  string descImages = 17; //descImages
+  string goodsFrontImage = 18; //goodsFrontImage
+  int64 isNew = 19; //isNew
+  int64 isHot = 20; //isHot
+}
+
+message AddGoodsResp {
+}
+
+message UpdateGoodsReq {
+  int64 deletedAt = 1; //deletedAt
+  int64 id = 2; //id
+  int64 addTime = 3; //addTime
+  int64 isDeleted = 4; //isDeleted
+  int64 categoryId = 5; //categoryId
+  int64 brandsId = 6; //brandsId
+  int64 onSale = 7; //onSale
+  string goodsSn = 8; //goodsSn
+  string name = 9; //name
+  int64 clickNum = 10; //clickNum
+  int64 soldNum = 11; //soldNum
+  int64 favNum = 12; //favNum
+  double marketPrice = 13; //marketPrice
+  double shopPrice = 14; //shopPrice
+  string goodsBrief = 15; //goodsBrief
+  int64 shipFree = 16; //shipFree
+  string images = 17; //images
+  string descImages = 18; //descImages
+  string goodsFrontImage = 19; //goodsFrontImage
+  int64 isNew = 20; //isNew
+  int64 isHot = 21; //isHot
+}
+
+message UpdateGoodsResp {
+}
+
+message DelGoodsReq {
+  int64 id = 1; //id
+}
+
+message DelGoodsResp {
+}
+
+message GetGoodsByIdReq {
+  int64 id = 1; //id
+}
+
+message GetGoodsByIdResp {
+  Goods goods = 1; //goods
+}
+
+message SearchGoodsReq {
+  int64 page = 1; //page
+  int64 limit = 2; //limit
+  int64 deletedAt = 3; //deletedAt
+  int64 id = 4; //id
+  int64 addTime = 5; //addTime
+  int64 isDeleted = 6; //isDeleted
+  int64 updateTime = 7; //updateTime
+  int64 categoryId = 8; //categoryId
+  int64 brandsId = 9; //brandsId
+  int64 onSale = 10; //onSale
+  string goodsSn = 11; //goodsSn
+  string name = 12; //name
+  int64 clickNum = 13; //clickNum
+  int64 soldNum = 14; //soldNum
+  int64 favNum = 15; //favNum
+  double marketPrice = 16; //marketPrice
+  double shopPrice = 17; //shopPrice
+  string goodsBrief = 18; //goodsBrief
+  int64 shipFree = 19; //shipFree
+  string images = 20; //images
+  string descImages = 21; //descImages
+  string goodsFrontImage = 22; //goodsFrontImage
+  int64 isNew = 23; //isNew
+  int64 isHot = 24; //isHot
+}
+
+message SearchGoodsResp {
+  repeated Goods goods = 1; //goods
+}
+
+
+
+// ------------------------------------ 
+// Rpc Func
+// ------------------------------------ 
+
+service goods{ 
+
+	 //-----------------------goods----------------------- 
+	 rpc AddGoods(AddGoodsReq) returns (AddGoodsResp); 
+	 rpc UpdateGoods(UpdateGoodsReq) returns (UpdateGoodsResp); 
+	 rpc DelGoods(DelGoodsReq) returns (DelGoodsResp); 
+	 rpc GetGoodsById(GetGoodsByIdReq) returns (GetGoodsByIdResp); 
+	 rpc SearchGoods(SearchGoodsReq) returns (SearchGoodsResp); 
+
+}
